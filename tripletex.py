@@ -68,7 +68,7 @@ class Tripletex:
         payload = {'generateVatPostings': 'true',
                    'encoding': 'utf-8'}
         files = [
-            ('file', ('file', open('gbat10--Sushi_Asia_Baobab--2024-10.txt', 'rb'), 'application/octet-stream'))
+            ('file', ('file', open('gbat10_report.txt', 'rb'), 'application/octet-stream'))
         ]
 
         response = requests.request("POST", f'{self.base_url}/ledger/voucher/importGbat10',  auth=self.auth, data=payload, files=files)
